@@ -5,8 +5,8 @@
 
 import re
 def check_sentence(text):
-    pattern = r'^[A-Z][a-z ]+[.?!]$'
-    result = re.search(pattern, text)
+    pattern = re.compile(r'^[A-Z][a-z ]+[.?!]$')
+    result = pattern.search(text)
     return result != None
 
 print(check_sentence("Is this is a sentence?")) # True

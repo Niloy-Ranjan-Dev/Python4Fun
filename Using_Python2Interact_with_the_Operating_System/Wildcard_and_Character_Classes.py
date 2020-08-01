@@ -3,7 +3,7 @@
 import re
 def check_aei (text):
     pattern = re.compile(r"[^aei]?[aei]?[^aei]+[aei]?[^aei]")
-    result = re.search(pattern, text)
+    result = pattern.search(text)
     return result != None
 
 print(check_aei("academia")) # True

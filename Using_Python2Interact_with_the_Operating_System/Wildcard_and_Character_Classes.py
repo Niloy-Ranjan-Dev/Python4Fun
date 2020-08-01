@@ -2,7 +2,7 @@
 
 import re
 def check_aei (text):
-    pattern = (r"[^aei]?[aei]?[^aei]+[aei]?[^aei]")
+    pattern = re.compile(r"[^aei]?[aei]?[^aei]+[aei]?[^aei]")
     result = re.search(pattern, text)
     return result != None
 

@@ -5,10 +5,11 @@
 import re
 def repeating_letter_a(text):
     pattern = re.compile(r"a+.*a+")
-    result = re.search(pattern, text.lower())
+    result = pattern.search(text.lower())
     return result != None
 
 print(repeating_letter_a("banana")) # True
 print(repeating_letter_a("pineapple")) # False
 print(repeating_letter_a("Animal Kingdom")) # True
 print(repeating_letter_a("A is for apple")) # True
+
